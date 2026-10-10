@@ -1,0 +1,31 @@
+appId: net.vmex.client
+productName: VMEX
+copyright: Copyright (C) 2026 VMEX Solutions
+directories:
+  buildResources: resources
+  output: release
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: resources/core
+    to: core
+    filter:
+      - "**/*"
+  - from: resources/icon.png
+    to: icon.png
+win:
+  icon: resources/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  artifactName: VMEX-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: VMEX
+portable:
+  artifactName: VMEX-Portable-${version}.${ext}

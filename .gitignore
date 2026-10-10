@@ -1,0 +1,14 @@
+node_modules
+out
+release
+resources/core/*.exe
+resources/core/*.dat
+resources/core/*.dll
+*.tsbuildinfo
+resources/core/*.json
+!resources/core/.gitkeep
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
